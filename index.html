@@ -327,7 +327,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/10/24/C-learning-note3/" itemprop="url">C-learning-note3</a></h1>
+                <a class="post-title-link" href="/2017/10/24/C-learning-note3/" itemprop="url">C学习笔记(3):指针</a></h1>
         
 
         <div class="post-meta">
@@ -350,6 +350,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/note/" itemprop="url" rel="index">
+                    <span itemprop="name">note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -357,7 +390,7 @@
 
           
           
-             <span id="/2017/10/24/C-learning-note3/" class="leancloud_visitors" data-flag-title="C-learning-note3">
+             <span id="/2017/10/24/C-learning-note3/" class="leancloud_visitors" data-flag-title="C学习笔记(3):指针">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -390,7 +423,10 @@
       
         
           
-            
+            <h1 id="C学习笔记-3-指针"><a href="#C学习笔记-3-指针" class="headerlink" title="C学习笔记(3):指针"></a>C学习笔记(3):指针</h1><p><code>C</code> <code>C学习笔记</code> <code>指针</code></p>
+<hr>
+<p>###指针的定义和赋值</p>
+
           
         
       
@@ -555,12 +591,11 @@
           
             <h1 id="C学习笔记-2"><a href="#C学习笔记-2" class="headerlink" title="C学习笔记(2)"></a>C学习笔记(2)</h1><p><code>C</code> <code>C学习笔记</code> <code>算法</code></p>
 <hr>
-<p>###函数的递归调用</p>
-<ul>
+<h3 id="函数的递归调用"><a href="#函数的递归调用" class="headerlink" title="函数的递归调用"></a>函数的递归调用</h3><ul>
 <li>必须定义第一项甚至第二项，作为递归的开始 <em>有点像数学归纳法的原理</em></li>
 <li>定义有限次数的、有终止的递归调用</li>
 </ul>
-<p>####一般形式<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="comment">//定义递归函数</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">recursion</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;<span class="comment">//recursion:递归</span></div><div class="line">    <span class="keyword">int</span> c;</div><div class="line">    <span class="keyword">if</span>(n==<span class="number">1</span>)&#123;</div><div class="line">        c;<span class="comment">//定义n=1时的返回值</span></div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        c = recursion(n<span class="number">-1</span>);<span class="comment">//定义递归调用自己的方法</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> c;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//main函数中调用</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> n;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">    </div><div class="line">    <span class="keyword">int</span> re = recursion(n);<span class="comment">//re的值即为该递归的返回值</span></div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="一般形式"><a href="#一般形式" class="headerlink" title="一般形式"></a>一般形式</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="comment">//定义递归函数</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">recursion</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;<span class="comment">//recursion:递归</span></div><div class="line">    <span class="keyword">int</span> c;</div><div class="line">    <span class="keyword">if</span>(n==<span class="number">1</span>)&#123;</div><div class="line">        c;<span class="comment">//定义n=1时的返回值</span></div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        c = recursion(n<span class="number">-1</span>);<span class="comment">//定义递归调用自己的方法</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> c;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//main函数中调用</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> n;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">    </div><div class="line">    <span class="keyword">int</span> re = recursion(n);<span class="comment">//re的值即为该递归的返回值</span></div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
 <li><strong>例子：汉诺塔</strong></li>
 </ul>
@@ -600,9 +635,7 @@ B --&gt; C
 A --&gt; C
 Program ended with exit code: 0
 </code></pre><p><br></p>
-<p>###C语言的变量和函数的储存方式</p>
-<p>#####C语言的关键字<code>static</code>和<code>extern</code></p>
-<hr>
+<h3 id="C语言的变量和函数的储存方式"><a href="#C语言的变量和函数的储存方式" class="headerlink" title="C语言的变量和函数的储存方式"></a>C语言的变量和函数的储存方式</h3><h5 id="C语言的关键字static和extern"><a href="#C语言的关键字static和extern" class="headerlink" title="C语言的关键字static和extern"></a>C语言的关键字<code>static</code>和<code>extern</code></h5><hr>
 <ul>
 <li><p><strong>变量</strong></p>
 <p>C语言的变量分为<strong>局部变量</strong>和<strong>全局变量</strong></p>
@@ -719,6 +752,39 @@ Program ended with exit code: 0
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/note/" itemprop="url" rel="index">
+                    <span itemprop="name">note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -845,145 +911,6 @@ Program ended with exit code: 0
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ivybloosom.github.io/2017/10/22/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zl">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/user.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ivybloosom">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/22/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-22T19:36:20+08:00">
-                2017-10-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/10/22/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1034,7 +961,7 @@ Program ended with exit code: 0
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1056,7 +983,7 @@ Program ended with exit code: 0
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="C学习笔记(2)C C学习笔记 算法  ###函数的递归调用  必须定义第一项甚至第二项，作为递归的开始 有点像数学归纳法的原理 定义有限次数的、有终止的递归调用  ####一般形式123456789101112131415161718192021#include &amp;lt;stdio.h&amp;gt;//定义递归函数int recursion(int n)&amp;#123;//recursion:递归">
+<meta name="description" content="C学习笔记(2)C C学习笔记 算法  函数的递归调用 必须定义第一项甚至第二项，作为递归的开始 有点像数学归纳法的原理 定义有限次数的、有终止的递归调用  一般形式123456789101112131415161718192021#include &amp;lt;stdio.h&amp;gt;//定义递归函数int recursion(int n)&amp;#123;//recursion:递归    int c;">
 <meta name="keywords" content="C,C学习笔记,算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C学习笔记(2)">
 <meta property="og:url" content="http://ivybloosom.github.io/2017/10/24/C-learning-note2/index.html">
 <meta property="og:site_name" content="ivybloosom">
-<meta property="og:description" content="C学习笔记(2)C C学习笔记 算法  ###函数的递归调用  必须定义第一项甚至第二项，作为递归的开始 有点像数学归纳法的原理 定义有限次数的、有终止的递归调用  ####一般形式123456789101112131415161718192021#include &amp;lt;stdio.h&amp;gt;//定义递归函数int recursion(int n)&amp;#123;//recursion:递归">
+<meta property="og:description" content="C学习笔记(2)C C学习笔记 算法  函数的递归调用 必须定义第一项甚至第二项，作为递归的开始 有点像数学归纳法的原理 定义有限次数的、有终止的递归调用  一般形式123456789101112131415161718192021#include &amp;lt;stdio.h&amp;gt;//定义递归函数int recursion(int n)&amp;#123;//recursion:递归    int c;">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3508783555,2312157095&fm=27&gp=0.jpg">
-<meta property="og:updated_time" content="2017-10-24T08:11:35.000Z">
+<meta property="og:updated_time" content="2017-10-24T09:28:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C学习笔记(2)">
-<meta name="twitter:description" content="C学习笔记(2)C C学习笔记 算法  ###函数的递归调用  必须定义第一项甚至第二项，作为递归的开始 有点像数学归纳法的原理 定义有限次数的、有终止的递归调用  ####一般形式123456789101112131415161718192021#include &amp;lt;stdio.h&amp;gt;//定义递归函数int recursion(int n)&amp;#123;//recursion:递归">
+<meta name="twitter:description" content="C学习笔记(2)C C学习笔记 算法  函数的递归调用 必须定义第一项甚至第二项，作为递归的开始 有点像数学归纳法的原理 定义有限次数的、有终止的递归调用  一般形式123456789101112131415161718192021#include &amp;lt;stdio.h&amp;gt;//定义递归函数int recursion(int n)&amp;#123;//recursion:递归    int c;">
 <meta name="twitter:image" content="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3508783555,2312157095&fm=27&gp=0.jpg">
 
 
@@ -424,12 +424,11 @@
       
         <h1 id="C学习笔记-2"><a href="#C学习笔记-2" class="headerlink" title="C学习笔记(2)"></a>C学习笔记(2)</h1><p><code>C</code> <code>C学习笔记</code> <code>算法</code></p>
 <hr>
-<p>###函数的递归调用</p>
-<ul>
+<h3 id="函数的递归调用"><a href="#函数的递归调用" class="headerlink" title="函数的递归调用"></a>函数的递归调用</h3><ul>
 <li>必须定义第一项甚至第二项，作为递归的开始 <em>有点像数学归纳法的原理</em></li>
 <li>定义有限次数的、有终止的递归调用</li>
 </ul>
-<p>####一般形式<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="comment">//定义递归函数</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">recursion</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;<span class="comment">//recursion:递归</span></div><div class="line">    <span class="keyword">int</span> c;</div><div class="line">    <span class="keyword">if</span>(n==<span class="number">1</span>)&#123;</div><div class="line">        c;<span class="comment">//定义n=1时的返回值</span></div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        c = recursion(n<span class="number">-1</span>);<span class="comment">//定义递归调用自己的方法</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> c;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//main函数中调用</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> n;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">    </div><div class="line">    <span class="keyword">int</span> re = recursion(n);<span class="comment">//re的值即为该递归的返回值</span></div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="一般形式"><a href="#一般形式" class="headerlink" title="一般形式"></a>一般形式</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="comment">//定义递归函数</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">recursion</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;<span class="comment">//recursion:递归</span></div><div class="line">    <span class="keyword">int</span> c;</div><div class="line">    <span class="keyword">if</span>(n==<span class="number">1</span>)&#123;</div><div class="line">        c;<span class="comment">//定义n=1时的返回值</span></div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        c = recursion(n<span class="number">-1</span>);<span class="comment">//定义递归调用自己的方法</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> c;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//main函数中调用</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> n;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">    </div><div class="line">    <span class="keyword">int</span> re = recursion(n);<span class="comment">//re的值即为该递归的返回值</span></div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
 <li><strong>例子：汉诺塔</strong></li>
 </ul>
@@ -469,9 +468,7 @@ B --&gt; C
 A --&gt; C
 Program ended with exit code: 0
 </code></pre><p><br></p>
-<p>###C语言的变量和函数的储存方式</p>
-<p>#####C语言的关键字<code>static</code>和<code>extern</code></p>
-<hr>
+<h3 id="C语言的变量和函数的储存方式"><a href="#C语言的变量和函数的储存方式" class="headerlink" title="C语言的变量和函数的储存方式"></a>C语言的变量和函数的储存方式</h3><h5 id="C语言的关键字static和extern"><a href="#C语言的关键字static和extern" class="headerlink" title="C语言的关键字static和extern"></a>C语言的关键字<code>static</code>和<code>extern</code></h5><hr>
 <ul>
 <li><p><strong>变量</strong></p>
 <p>C语言的变量分为<strong>局部变量</strong>和<strong>全局变量</strong></p>
@@ -543,8 +540,8 @@ Program ended with exit code: 0
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/10/24/C-learning-note3/" rel="prev" title="C-learning-note3">
-                C-learning-note3 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/10/24/C-learning-note3/" rel="prev" title="C学习笔记(3):指针">
+                C学习笔记(3):指针 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -626,7 +623,7 @@ Program ended with exit code: 0
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -648,7 +645,7 @@ Program ended with exit code: 0
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -691,7 +688,7 @@ Program ended with exit code: 0
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C学习笔记-2"><span class="nav-number">1.</span> <span class="nav-text">C学习笔记(2)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C学习笔记-2"><span class="nav-number">1.</span> <span class="nav-text">C学习笔记(2)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数的递归调用"><span class="nav-number">1.0.1.</span> <span class="nav-text">函数的递归调用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一般形式"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">一般形式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C语言的变量和函数的储存方式"><span class="nav-number">1.0.2.</span> <span class="nav-text">C语言的变量和函数的储存方式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#C语言的关键字static和extern"><span class="nav-number">1.0.2.0.1.</span> <span class="nav-text">C语言的关键字static和extern</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
