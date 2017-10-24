@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="C,C学习笔记,算法," />
 
 
 
@@ -81,17 +81,20 @@
 
 
 
-<meta name="description" content="纵有千年铁门槛，终须一个土馒头">
+<meta name="description" content="C学习笔记(2)C C学习笔记 算法  ###函数的递归调用  必须定义第一项甚至第二项，作为递归的开始 有点像数学归纳法的原理 定义有限次数的、有终止的递归调用  ####一般形式123456789101112131415161718192021#include &amp;lt;stdio.h&amp;gt;//定义递归函数int recursion(int n)&amp;#123;//recursion:递归">
+<meta name="keywords" content="C,C学习笔记,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C-learning-note2">
+<meta property="og:title" content="C学习笔记(2)">
 <meta property="og:url" content="http://ivybloosom.github.io/2017/10/24/C-learning-note2/index.html">
 <meta property="og:site_name" content="ivybloosom">
-<meta property="og:description" content="纵有千年铁门槛，终须一个土馒头">
+<meta property="og:description" content="C学习笔记(2)C C学习笔记 算法  ###函数的递归调用  必须定义第一项甚至第二项，作为递归的开始 有点像数学归纳法的原理 定义有限次数的、有终止的递归调用  ####一般形式123456789101112131415161718192021#include &amp;lt;stdio.h&amp;gt;//定义递归函数int recursion(int n)&amp;#123;//recursion:递归">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-24T07:27:42.000Z">
+<meta property="og:image" content="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3508783555,2312157095&fm=27&gp=0.jpg">
+<meta property="og:updated_time" content="2017-10-24T08:11:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C-learning-note2">
-<meta name="twitter:description" content="纵有千年铁门槛，终须一个土馒头">
+<meta name="twitter:title" content="C学习笔记(2)">
+<meta name="twitter:description" content="C学习笔记(2)C C学习笔记 算法  ###函数的递归调用  必须定义第一项甚至第二项，作为递归的开始 有点像数学归纳法的原理 定义有限次数的、有终止的递归调用  ####一般形式123456789101112131415161718192021#include &amp;lt;stdio.h&amp;gt;//定义递归函数int recursion(int n)&amp;#123;//recursion:递归">
+<meta name="twitter:image" content="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3508783555,2312157095&fm=27&gp=0.jpg">
 
 
 
@@ -127,7 +130,7 @@
 
 
 
-  <title>C-learning-note2 | ivybloosom</title>
+  <title>C学习笔记(2) | ivybloosom</title>
   
 
 
@@ -325,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">C-learning-note2</h1>
+          <h1 class="post-title" itemprop="name headline">C学习笔记(2)</h1>
         
 
         <div class="post-meta">
@@ -348,6 +351,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/note/" itemprop="url" rel="index">
+                    <span itemprop="name">note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -355,7 +391,7 @@
 
           
           
-             <span id="/2017/10/24/C-learning-note2/" class="leancloud_visitors" data-flag-title="C-learning-note2">
+             <span id="/2017/10/24/C-learning-note2/" class="leancloud_visitors" data-flag-title="C学习笔记(2)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -386,7 +422,84 @@
       
 
       
-        
+        <h1 id="C学习笔记-2"><a href="#C学习笔记-2" class="headerlink" title="C学习笔记(2)"></a>C学习笔记(2)</h1><p><code>C</code> <code>C学习笔记</code> <code>算法</code></p>
+<hr>
+<p>###函数的递归调用</p>
+<ul>
+<li>必须定义第一项甚至第二项，作为递归的开始 <em>有点像数学归纳法的原理</em></li>
+<li>定义有限次数的、有终止的递归调用</li>
+</ul>
+<p>####一般形式<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="comment">//定义递归函数</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">recursion</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;<span class="comment">//recursion:递归</span></div><div class="line">    <span class="keyword">int</span> c;</div><div class="line">    <span class="keyword">if</span>(n==<span class="number">1</span>)&#123;</div><div class="line">        c;<span class="comment">//定义n=1时的返回值</span></div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        c = recursion(n<span class="number">-1</span>);<span class="comment">//定义递归调用自己的方法</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> c;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//main函数中调用</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> n;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">    </div><div class="line">    <span class="keyword">int</span> re = recursion(n);<span class="comment">//re的值即为该递归的返回值</span></div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<ul>
+<li><strong>例子：汉诺塔</strong></li>
+</ul>
+<p>汉诺塔是一个很典型的递归的例子。其问题是这样的：古代有一个梵塔，塔内有3个座A，B，C，开始时A座上有64个盘子，盘子大小不等，大的在下，小的在上（如图）。有一个老和尚想把这64个盘子从A座移到C座，但规定每次只允许移动一个盘子，且在移动的过程中3个座上都始终保持大盘在下，小盘在上。在移动过程中可以利用B座。</p>
+<p><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3508783555,2312157095&amp;fm=27&amp;gp=0.jpg" alt="汉诺塔图片"></p>
+<pre><code>问题解决：简化模型，A-&gt;C移动64个盘子可以简化问题为:
+
+1.63个盘子：A-&gt;B
+2.一个盘子：A-&gt;C
+3.63个盘子：B-&gt;C
+
+想实现以上过程，需要实现：
+
+1.62个盘子：A-&gt;C
+2.一个盘子：A-&gt;B
+3.62个盘子：B-&gt;C
+...
+由此可以抽象化为：
+
+1.n-1个盘子：起始柱-&gt;辅助柱
+2.一个盘子：起始柱-&gt;目标柱
+3.n-1个盘子：辅助柱-&gt;目标柱
+
+注：
+1.由于过程的复杂性，并不是每一步的起始柱和目标柱都是A和C，所以需要灵活定义。
+2.定义函数 hanni(盘子总数,起始柱,辅助柱,目标柱)，这三个柱子的顺序并没有固定，但是需要在自己的函数中一致
+</code></pre><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> 输入:盘子总数</span></div><div class="line"><span class="comment"> 输出:移动盘子的步骤</span></div><div class="line"><span class="comment">**/</span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">hanni</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">char</span>,<span class="keyword">char</span>,<span class="keyword">char</span>)</span></span>;</div><div class="line">    <span class="keyword">int</span> m;    <span class="comment">//盘子总数</span></div><div class="line">    <span class="built_in">printf</span>(<span class="string">"input the number of disks:"</span>);</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;m);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"the step to move %d disks:\n"</span>,m);</div><div class="line">    hanni(m, <span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>);    <span class="comment">//调用递归函数，传递总数m</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">hanni</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">char</span> one,<span class="keyword">char</span> two,<span class="keyword">char</span> three)</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">m_ove</span><span class="params">(<span class="keyword">char</span>,<span class="keyword">char</span>)</span></span>;</div><div class="line">    <span class="keyword">if</span>(n==<span class="number">1</span>)&#123;    <span class="comment">//定义递归的开始</span></div><div class="line">        m_ove(one, three);</div><div class="line">    &#125;<span class="keyword">else</span>&#123;    <span class="comment">//定义递归的具体步骤</span></div><div class="line">        hanni(n<span class="number">-1</span>, one, three, two);<span class="comment">//将n-1个盘子从A移到B；</span></div><div class="line">        m_ove(one, three);<span class="comment">//将A的盘子移到C；</span></div><div class="line">        hanni(n<span class="number">-1</span>, two, one, three);<span class="comment">//将B的n-1个盘子移到C；</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">m_ove</span><span class="params">(<span class="keyword">char</span> x,<span class="keyword">char</span> y)</span></span>&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%c --&gt; %c\n"</span>,x,y);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<pre><code>输出结果：
+input the number of disks:3
+the step to move 3 disks:
+A --&gt; C
+A --&gt; B
+C --&gt; B
+A --&gt; C
+B --&gt; A
+B --&gt; C
+A --&gt; C
+Program ended with exit code: 0
+</code></pre><p><br></p>
+<p>###C语言的变量和函数的储存方式</p>
+<p>#####C语言的关键字<code>static</code>和<code>extern</code></p>
+<hr>
+<ul>
+<li><p><strong>变量</strong></p>
+<p>C语言的变量分为<strong>局部变量</strong>和<strong>全局变量</strong></p>
+</li>
+</ul>
+<p><strong><em>局部变量:</em></strong>用完即释放空间，<em>需定义清楚数据类型以分配空间</em></p>
+<ol>
+<li><code>auto</code>：<em>默认值</em>，在<strong>动态储存区</strong>中分配储存空间，函数调用结束时就释放这些储存空间</li>
+<li><code>static</code>：在<strong>静态储存区</strong>内分配储存单元，在程序整个调用期间都不释放。 可重复调用上次结果的值</li>
+<li><code>*register</code>：储存于CPU寄存器，由于硬件的发展，现已淘汰</li>
+</ol>
+<p><strong><em>全局变量:</em></strong>分配静态储存空间，<em>无需定义清楚数据类型，但是需要申明作用类型</em></p>
+<ol>
+<li>直接定义，全局可用，在其他文件中使用时可用<code>extern</code>关键字申明 </li>
+<li>用<code>static</code>申明，将变量的作用域限制在本文件中，其他文件不可引用 <strong>由于该方法提高了安全性，推荐使用</strong> </li>
+</ol>
+<hr>
+<ul>
+<li><strong>函数</strong><br>C语言的函数分为<strong>内部函数</strong>和<strong>外部函数</strong></li>
+</ul>
+<p><strong><em>内部函数</em></strong>：只能被本文件中的其他函数调用。在申明时加<code>static</code>关键字</p>
+<pre><code>例：static int fun(int a,int b);
+</code></pre><p><strong><em>外部函数</em></strong>：<em>默认值</em>，可供其他文件调用.在申明时加<code>extern</code>关键字</p>
+<pre><code>例：extern int fun(int a,int b);
+</code></pre><hr>
+<p>一般来说，在文件首定义<code>static</code>的变量和函数，提高工程的可靠性和通用性</p>
+<hr>
+
       
     </div>
     
@@ -401,6 +514,16 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/C/" rel="tag"># C</a>
+          
+            <a href="/tags/C学习笔记/" rel="tag"># C学习笔记</a>
+          
+            <a href="/tags/算法/" rel="tag"># 算法</a>
+          
+        </div>
+      
 
       
       
@@ -410,8 +533,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/22/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2017/10/24/C-learning-note1/" rel="next" title="C学习笔记(1)">
+                <i class="fa fa-chevron-left"></i> C学习笔记(1)
               </a>
             
           </div>
@@ -474,8 +597,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -494,14 +626,32 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
@@ -531,6 +681,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C学习笔记-2"><span class="nav-number">1.</span> <span class="nav-text">C学习笔记(2)</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
